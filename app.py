@@ -9,7 +9,7 @@ from mapie.metrics import regression_coverage_score
 from sklearn.model_selection import train_test_split
 
 password_guess = st.text_input("Enter password to access the app:", type="password")
-if password_guess != "joemasch":
+if password_guess != st.secrets["password"]:
     st.stop()
 
 DATA_PATH = Path("Admission_Predict.csv")
